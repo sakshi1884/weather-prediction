@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.weather-left h1{
+    font-family: 'Playfair Display';
+    letter-spacing: 5px;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.weather-left h2{
+    font-size: 70px;
+    font-family: 'serif';
+    color: rgb(234, 194, 100);
+}
+.condition{
+    text-transform: capitalize;
+}
+
+.cardcontent{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+.weather-card-content{
+    width: 100%;
+}
+
+.weather-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.weather-left{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.weather-right{
+    width:300px;
+    height:300px;
+    margin-right: 70px;
+}
+
+
+.weather-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.stat-boxe {
+    width: 100%;
+    min-height: 160px; 
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.stat-boxe:hover{
+    transform:translateY(-5px);
+}
+
+.stat-boxe span{
+    font-size:24px;
+}
+
+.stat-boxe h4{
+    margin:8px 0 2px;
+    font-size:20px;
+}
+
+.stat-boxe p{
+    margin:0;
+    opacity:0.8;
+    font-size:20px;
+}

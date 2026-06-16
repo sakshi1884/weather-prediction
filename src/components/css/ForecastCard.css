@@ -1,0 +1,70 @@
+.weather-card-content{
+    width:100%;
+    background-color: none;
+}
+
+.weather-top{
+   display: flex;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.weather-left{
+    display:flex;
+    flex-direction:column;
+    flex:1
+}
+
+.weather-left h1{
+    font-family:"Playfair Display", serif;
+    letter-spacing:5px;
+    font-size:70px;
+    text-transform:uppercase;
+    margin:0;
+}
+
+.weather-left h2{
+    font-family:"Playfair Display", serif;
+    font-size:50px;
+    color:rgb(234,194,100);
+    margin:10px 0;
+}
+
+.condition{
+    text-transform:capitalize;
+    font-size:22px;
+    color: aliceblue;
+}
+
+.weather-right{
+    width:150px;
+    height:150px;
+    /* flex-shrink:0; */
+}
+
+.weather-stats{
+    display:flex;
+    justify-content:center;
+    gap:7px;
+    margin-top:20px;
+}
+
+.stat-box{
+     flex:1;
+     overflow:hidden;
+    min-width:0;
+    transition:0.3s;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.stat-box p, .stat-box h4{
+  
+    font-size: 14px;
+}
+
+
+.stat-box:hover{
+    transform:translateY(-5px);
+}
+
