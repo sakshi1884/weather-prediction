@@ -8,7 +8,7 @@ import { useNavigate, useParams  } from "react-router-dom";
 
 export default function Forecast() {
   const [forecast, setForecast] = useState([]);
-  const [Loading,setLoading] =useState(false);
+  const [loading,setLoading] =useState(false);
   const navigate = useNavigate();
    const { city } = useParams();
 
