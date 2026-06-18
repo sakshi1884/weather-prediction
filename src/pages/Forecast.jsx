@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import ForecastCard from "../components/ForecastCard";
+import Loader from "../components/Loader"
 import "./css/Forecast.css";
 
 import { useState, useEffect } from "react";
@@ -7,6 +8,7 @@ import { useNavigate, useParams  } from "react-router-dom";
 
 export default function Forecast() {
   const [forecast, setForecast] = useState([]);
+  const [Loading,setLoading] =useState(false);
   const navigate = useNavigate();
    const { city } = useParams();
 
@@ -15,6 +17,7 @@ export default function Forecast() {
 
   const getForecast = async (city) => {
     try {
+      setLoading(true);
         
       const response = await fetch(
         `${import.meta.env.VITE_API_FORECAST}?q=${city}&appid=${
@@ -45,6 +48,8 @@ export default function Forecast() {
       return dailyForecast;
     } catch (err) {
       throw err;
+    }finally{
+      setLoading(false);
     }
   };
 
@@ -70,9 +75,14 @@ export default function Forecast() {
         <h1 style={{paddingTop:"150px",paddingLeft:"25px",textTransform:"uppercase",color:"white",letterSpacing:"5px"}}>{city}</h1>
       <div className="forecast-container">
         
-        {forecast.map((day, index) => (
+        {loading?(
+          <Loader/>
+        ):(
+          forecast.map((day, index) => (
           <ForecastCard key={index} forecast={day} />
-        ))}
+        ))
+        )}
+        
       </div>
 
       <div className="bottom-btn">
