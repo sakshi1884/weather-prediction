@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import "./css/Search.css";
-
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
@@ -9,15 +8,18 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import WeatherCard from "../components/WeatherCard";
-import ForecastCard from "../components/ForecastCard"
+import ForecastCard from "../components/ForecastCard";
+import Loader from "../components/Loader";
 export default function Search() {
   const [city, setCity] = useState("");
   const [error, setError] = useState(false);
   const [weather, setWeather] = useState(null);
+  const [loading,setLoading] = useState(false);
   const navigate = useNavigate();
 
   const getWeather = async (city) => {
     try {
+      setLoading(true);
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}?q=${city}&appid=${import.meta.env.VITE_API_KEY}&units=metric`);
 
@@ -42,7 +44,9 @@ export default function Search() {
       return result;
     } catch (err) {
       throw err;
-    }
+    }finally{
+        setLoading(false);
+      }
   };
     useEffect(() => {
     const loadDefaultWeather = async () => {
@@ -106,9 +110,12 @@ export default function Search() {
           </div>
         </div>
 
-        {error && <p className="error">No such place exists</p>}
-
-        {weather && <WeatherCard weather={weather} />}
+        {error && <p className="error">No such place exists</p>}       
+        {loading?(
+                  <Loader/>
+                ):(
+                  weather && <WeatherCard weather={weather} />
+                )}
         {weather && <ForecastCard weather={weather} />}
         <div className="bottom-btn">
             <button

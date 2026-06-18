@@ -10,7 +10,7 @@ export default function Forecast() {
   const navigate = useNavigate();
    const { city } = useParams();
 
-  console.log(city);
+  //console.log(city);
   
 
   const getForecast = async (city) => {

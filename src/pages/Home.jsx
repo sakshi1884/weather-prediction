@@ -2,15 +2,18 @@ import "./css/Home.css"
 import { useNavigate } from "react-router-dom";
 import WeatherCard from "../components/WeatherCard";
 import Navbar from "../components/Navbar";
+import Loader from "../components/Loader"
 import {useState,useEffect} from 'react';
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_right" />
 export default function Home(){
     const navigate =useNavigate();
     const [weather, setWeather] = useState(null);
+    const [loading,setLoading] = useState(false);
 
   useEffect(() => {
     const fetchWeather = async () => {
       try {
+        setLoading(true);
         const response = await fetch(
           `${import.meta.env.VITE_API_URL}?q=Satara&appid=${import.meta.env.VITE_API_KEY}&units=metric`
         );
@@ -29,6 +32,8 @@ export default function Home(){
         });
       } catch (err) {
         console.error(err);
+      }finally{
+        setLoading(false);
       }
     };
 
@@ -52,7 +57,12 @@ export default function Home(){
             </div>
             </div>
         </div>
-        <WeatherCard className="weatherCard" weather={weather} />
+        {loading?(
+          <Loader/>
+        ):(
+          <WeatherCard className="weatherCard" weather={weather} />
+        )}
+        
         <div className="bottom-btn">
             <button onClick={() => navigate("/search")}>
       Search another city       
