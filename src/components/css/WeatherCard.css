@@ -13,7 +13,7 @@
 .weather-left h2{
     font-size: 70px;
     font-family: 'serif';
-    color: rgb(234, 194, 100);
+    color: var(--accent);
 }
 .condition{
     text-transform: capitalize;

@@ -5,7 +5,7 @@ export  const weatherAnimations ={
     "02n":"https://lottie.host/aebdf346-433f-4633-9a1b-e2c90884de77/5CsuawVzB4.lottie",
     "03d":"https://lottie.host/f24b2084-26f1-4024-bd92-eba153a4d43b/ePEvx1W4uK.lottie",
     "03n":"https://lottie.host/f24b2084-26f1-4024-bd92-eba153a4d43b/ePEvx1W4uK.lottie",
-    "04d":"https://lottie.host/fd8e80ca-3bc6-4196-ae05-cd79ad233151/BH1MumrBhQ.lottie",
+    "04d":"https://lottie.host/a440b9c8-d562-4bcb-9982-5bdfcdc67aa0/qjn7ACJHa0.lottie",
     "04n":"https://lottie.host/fd8e80ca-3bc6-4196-ae05-cd79ad233151/BH1MumrBhQ.lottie",
     "09d":"https://lottie.host/e623000b-f354-43d3-832b-32315a1e3f41/UDCxJCnJyu.lottie",
     "10d":"https://lottie.host/8950fece-7110-445c-a4fb-97c705fb025e/ogML0CRWex.lottie",

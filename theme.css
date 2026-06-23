@@ -1,0 +1,28 @@
+[data-theme ="light"]{
+    background:
+    radial-gradient(circle at top left,#7b7b77,#dcd8d1 40%,#eeece8);
+    --color: #1e293b;
+
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --border-color: rgba(0, 0, 0, 0.1);
+ --button-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+
+    --accent: #e9a905;
+    --secondary-text: #64748b;
+}
+
+[data-theme="dark"]{
+    background:
+    radial-gradient(circle at top left,#0f4c81,#08142f 40%,#1d062d);
+    --color: #f8fafc;
+
+    --card-bg:#1e293b;
+    --border-color: rgba(255, 255, 255, 0.15);
+        --button-shadow: 0 4px 20px rgba(244, 201, 93, 0.25);
+
+
+    --accent: #f4c95d;
+    --secondary-text: #bfc0c0;
+
+}

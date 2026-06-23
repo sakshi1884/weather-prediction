@@ -72,7 +72,7 @@ export default function Forecast() {
     <>
       <Navbar />
       
-        <h1 style={{paddingTop:"150px",paddingLeft:"25px",textTransform:"uppercase",color:"white",letterSpacing:"5px"}}>{city}</h1>
+        <h1 style={{paddingTop:"150px",paddingLeft:"25px",textTransform:"uppercase",color:"var(--color)",letterSpacing:"5px"}}>{city}</h1>
       <div className="forecast-container">
         
         {loading?(

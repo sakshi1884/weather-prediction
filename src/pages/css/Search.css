@@ -13,18 +13,18 @@
 .explore {
   letter-spacing: 8px;
   font-size: 1.2rem;
-  color: #c9c9c9;
+  color:var(--color);
   margin-bottom: 10px;
 }
 
 .content h1 {
-  color: white;
+  color: var(--color);
   font-size: 4rem;
   margin: 0;
 }
 
 .content h4 {
-  color: white;
+  color: var(--color);
   font-size: 1.8rem;
   font-weight: 400;
   margin-top: 10px;
@@ -51,7 +51,7 @@
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--border-color);
 
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
@@ -71,18 +71,18 @@
 
   border-radius: 22px;
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border-color);
 
   padding: 12px 20px;
 }
 
 .city-input input {
-  color: white;
+  color: var(--color);
   font-size: 1.2rem;
 }
 
 .city-input input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color);
 }
 
 /* BUTTON */
@@ -93,7 +93,8 @@
   border: none;
   border-radius: 22px;
 
-  background: #16c8ff;
+  background: var(--color);
+  color: var(--card-bg);
 
   font-size: 1.2rem;
   cursor: pointer;
@@ -108,4 +109,8 @@
 .error {
   color: #ff7b7b;
   margin-top: 20px;
+}
+
+.bottom-btn{
+  
 }

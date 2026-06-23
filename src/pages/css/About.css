@@ -3,23 +3,24 @@
     margin: 30px;
 }
 .about-content h4{
-    color: white;
+    color: var(--color);
     letter-spacing: 3px;
     font-size:35px ;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
 .info p{
-    color: white;
+    color: var(--color);
     text-transform: capitalize;
     font-size: 20px;
     letter-spacing: 1px;
 }
 
 .info{
-    background:rgba(255,255,255,0.1);
+    background:var(--background);
     backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,0.15);
+    border:1px solid var(--border-color);
+    box-shadow: var(--box-shadow) !important;
     border-radius:20px;
     padding:15px;
     text-align:left;  

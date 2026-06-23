@@ -22,7 +22,7 @@ export default function ForecastCard({forecast}){
     maxWidth:"600px",
      background:"rgba(255,255,255,0.1)",
     backdropFilter:"blur(10px)",
-    border:"1px solid rgba(255,255,255,0.15)",
+    border:"1px solid var(--border-color)",
     borderRadius:"15px",
     padding:"2px",
     margin:"10px"
@@ -38,7 +38,7 @@ export default function ForecastCard({forecast}){
             <p className="condition">
                 {forecast.weather}
             </p>
-             <p style={{color:"white"}}>{forecast.date}</p>
+             <p style={{color:"var(--color)"}}>{forecast.date}</p>
            
 
             <h2>{forecast.temp}°C</h2>

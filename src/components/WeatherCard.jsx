@@ -25,7 +25,7 @@ const iconCode = weather.icon;
             backdropFilter: "blur(20px)",
             border: "1px solid rgba(255,255,255,0.15)",
             borderRadius: "35px",
-            color: "white",
+            color:"var(--color)",
             padding: "10px",
           }}
         >
@@ -64,13 +64,13 @@ const iconCode = weather.icon;
 
             <div className="stat-boxe">
             <h4>{weather.humidity}%</h4>
-            <AcUnitRoundedIcon sx={{ fontSize: 40 }}/>
+            <AcUnitRoundedIcon sx={{ fontSize: 40 ,color:"var(--color)"}}/>
             <p>Humidity</p>
             </div>
 
             <div className="stat-boxe">
             <h4>{weather.windSpeed}</h4>
-            <AirRoundedIcon sx={{ fontSize: 40 }}/>
+            <AirRoundedIcon sx={{ fontSize: 40 , color:"var(--color" }}/>
             <p>Wind Speed</p>
             </div>
         </div>
